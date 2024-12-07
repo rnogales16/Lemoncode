@@ -1,0 +1,58 @@
+@use "sass:color" as *;
+
+$base-color-1: #2da3f1;
+$base-color-2: #e21616;
+$base-color-3: #fbff00;
+
+$oscurecer: 4;
+$aclarar: 4;
+
+body {
+  background-color: rgb(43, 43, 43);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  color: $base-color-3;
+}
+
+.container {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  .box {
+    padding: 20px;
+    border-radius: 10px;
+  }
+}
+
+@for $e from 1 through 4 {
+  .base-color {
+    background-color: $base-color-3;
+  }
+
+  @for $i from 1 through $oscurecer {
+    .darken-#{$i} {
+      background-color: adjust-color(
+        $color: $base-color-3,
+        $lightness: $i * 10%
+      );
+      color: adjust-color($color: $base-color-3, $lightness: $i * -10%);
+    }
+  }
+
+  @for $i from 1 through $aclarar {
+    .lighten-#{$i} {
+      background-color: adjust-color(
+        $color: $base-color-3,
+        $lightness: $i * -10%
+      );
+      color: adjust-color($color: $base-color-3, $lightness: $i * 10%);
+    }
+  }
+}
