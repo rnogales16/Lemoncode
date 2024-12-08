@@ -1,0 +1,61 @@
+$base-color: #00ffea;
+
+@mixin box {
+  height: 80px;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+}
+
+body {
+  background-color: rgb(56, 56, 56);
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  color: $base-color;
+}
+
+.boxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  .box-1 {
+    @include box;
+    background-color: $base-color;
+  }
+  .box-2 {
+    @include box;
+    background-color: adjust-color($color: $base-color, $lightness: -40%);
+    color: adjust-color($color: $base-color, $lightness: 40%);
+  }
+  .box-3 {
+    @include box;
+    background-color: adjust-color($color: $base-color, $lightness: 40%);
+    color: adjust-color($color: $base-color, $lightness: -40%);
+  }
+}
+
+.font {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 600px;
+  margin: 80px auto;
+  text-align: justify;
+}
+
+.shadow {
+  width: 130px;
+  margin: auto;
+  background-color: $base-color;
+  padding: 10px;
+  box-shadow: -20px 15px 5px white;
+  p {
+    text-align: center;
+  }
+}
