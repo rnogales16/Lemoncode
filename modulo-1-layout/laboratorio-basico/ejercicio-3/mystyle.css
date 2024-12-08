@@ -1,0 +1,31 @@
+body {
+  background-color: rgb(36, 36, 36);
+  color: white;
+  text-align: center;
+}
+
+.navbar {
+  background-color: rgb(91, 168, 143);
+}
+
+.link {
+  color: white;
+  padding: 5px 25px;
+  text-decoration-line: none;
+}
+.link:hover {
+  background-color: rgb(49, 99, 82);
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: auto;
+}
+
+@media (max-width: 600px) {
+  .links {
+    flex-direction: column;
+  }
+}
