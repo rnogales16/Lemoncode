@@ -1,0 +1,49 @@
+body {
+  background-color: rgb(114, 114, 114);
+}
+
+.cards {
+  max-width: 1350px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  grid-template-rows: repeat(2, 450px);
+  gap: 50px;
+}
+
+.card {
+  max-width: 296px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid black;
+  display: grid;
+}
+
+.boat {
+  width: 296px;
+}
+
+.text {
+  padding: 10px;
+  h6 {
+    font-size: 18px;
+    margin: 0;
+  }
+}
+
+.date {
+  text-align: end;
+  span {
+    color: greenyellow;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  button {
+    width: 100%;
+    padding: 8px 15px;
+    background-color: greenyellow;
+    border: 0;
+  }
+}
