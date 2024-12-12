@@ -1,0 +1,36 @@
+@use "sass:color" as *;
+
+$base-color-1: #2da3f1;
+$base-color-2: #e21616;
+$base-color-3: #fbff00;
+
+$oscurecer: 4;
+$aclarar: 4;
+
+body {
+  background-color: #141414;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  img {
+    width: 120px;
+  }
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
