@@ -1,5 +1,6 @@
 @use "sass:color" as *;
 
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
 $base-color-1: #2da3f1;
 $base-color-2: #e21616;
 $base-color-3: #fbff00;
@@ -23,9 +24,9 @@ header {
 .header-logo {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 10px;
   img {
-    width: 120px;
+    width: 90px;
   }
 }
 
