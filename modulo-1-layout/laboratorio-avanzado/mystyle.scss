@@ -1,24 +1,17 @@
-@use "sass:color" as *;
-
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
-$base-color-1: #2da3f1;
-$base-color-2: #e21616;
-$base-color-3: #fbff00;
-
-$oscurecer: 4;
-$aclarar: 4;
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
 
 body {
+  font-family: "Jost";
   background-color: #141414;
   color: white;
-  margin: 0;
-  padding: 0;
+  margin: auto;
+  padding: 40px;
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  padding: 25px;
+  margin-bottom: 30px;
 }
 
 .header-logo {
@@ -33,5 +26,146 @@ header {
 .header-buttons {
   display: flex;
   align-items: center;
-  gap: 30px;
+  div {
+    padding: 10px;
+  }
+  div:hover {
+    color: rgb(36, 101, 155);
+    background-color: white;
+    padding: 10px;
+    cursor: pointer;
+  }
+}
+
+.tres {
+  display: none;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-item {
+  min-width: 225px;
+  margin: auto;
+  img {
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+.first {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  .item {
+    flex: 1 1 250px;
+    overflow: hidden;
+    position: relative;
+    transition: flex 0.3s ease, transform 0.3s ease;
+    margin: auto;
+    .img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+    &:hover {
+      z-index: 10;
+      transform: scale(1.2);
+    }
+  }
+  &:hover .img:not(:hover) {
+    flex: 1;
+  }
+}
+
+.section-title {
+  margin-top: 40px;
+}
+
+.second {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  .item {
+    flex: 1 1 250px;
+    transition: flex 0.3s ease, transform 0.3s ease;
+    overflow: hidden;
+    margin: auto;
+    .img {
+      width: 100%;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    &:hover {
+      flex: 4;
+      transform: scale(1);
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .platform-title {
+    display: none;
+  }
+
+  .tres {
+    display: block;
+  }
+
+  .cinco {
+    display: none;
+  }
+
+  .top-item:nth-child(n + 4) {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .header-logo {
+    gap: 5px;
+    img {
+      width: 60px;
+    }
+  }
+
+  .top {
+    flex-wrap: wrap;
+  }
+
+  .top-item {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 580px) {
+  .second {
+    display: flex;
+    flex-direction: column; /* Apila las imágenes verticalmente */
+
+    .item {
+      flex: 1 1 auto; /* Las imágenes ocupan todo el ancho disponible */
+      transition: flex 0.3s ease, transform 0.3s ease;
+
+      .img {
+        width: 100%;
+        height: 100%; /* Rellena todo el contenedor */
+        transition: transform 0.3s ease; /* Suaviza el cambio de escala */
+      }
+
+      &:hover {
+        .img {
+          transform: scale(1.1); /* Escala la imagen más allá del contenedor */
+        }
+      }
+
+      &:not(:hover) {
+        .img {
+          transform: scale(1); /* Restaura el tamaño original */
+        }
+      }
+    }
+  }
 }
