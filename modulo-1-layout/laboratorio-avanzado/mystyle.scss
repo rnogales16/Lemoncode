@@ -99,7 +99,7 @@ header {
       cursor: pointer;
     }
     &:hover {
-      flex: 4;
+      flex: 8;
       transform: scale(1);
     }
   }
@@ -143,27 +143,27 @@ header {
 @media (max-width: 580px) {
   .second {
     display: flex;
-    flex-direction: column; /* Apila las imágenes verticalmente */
+    flex-direction: column;
 
     .item {
-      flex: 1 1 auto; /* Las imágenes ocupan todo el ancho disponible */
+      flex: 1 1 auto;
       transition: flex 0.3s ease, transform 0.3s ease;
 
       .img {
         width: 100%;
-        height: 100%; /* Rellena todo el contenedor */
-        transition: transform 0.3s ease; /* Suaviza el cambio de escala */
+        height: 100%;
+        transition: transform 0.3s ease;
       }
 
       &:hover {
         .img {
-          transform: scale(1.1); /* Escala la imagen más allá del contenedor */
+          transform: scale(1.1);
         }
       }
 
       &:not(:hover) {
         .img {
-          transform: scale(1); /* Restaura el tamaño original */
+          transform: scale(1);
         }
       }
     }
